@@ -105,28 +105,32 @@ body {
     margin-bottom: 32px;
     box-shadow: 0 10px 32px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 648px;
-    overflow-y: scroll;
+    height: 656px;
+    overflow-y: auto;
 }
 
-.card::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #F5F5F5;
+/* Hide scrollbar by default */
+.card::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 
-.card::-webkit-scrollbar
-{
-	width: 12px;
-	background-color: #F5F5F5;
+/* Show scrollbar on hover */
+.card:hover::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
 }
 
-.card::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #555;
+.card:hover::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.card:hover::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #4a5568;
 }
 
 .card:hover {
