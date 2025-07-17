@@ -14,17 +14,17 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 24px;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 80px 0;
+    padding: 24px 0;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    border-radius: 20px;
-    margin-bottom: 40px;
+    border-radius: 24px;
+    margin-bottom: 48px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
@@ -32,7 +32,7 @@ body {
     font-size: 3.5rem;
     font-weight: 700;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -53,15 +53,15 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 40px;
+    gap: 16px;
+    margin-bottom: 48px;
 }
 
 .nav-btn {
     background: rgba(255, 255, 255, 0.2);
     border: none;
     padding: 12px 24px;
-    border-radius: 25px;
+    border-radius: 24px;
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -101,20 +101,22 @@ body {
 .card {
     background: white;
     border-radius: 16px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 648px;
+    overflow-y: hidden;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15);
 }
 
 .card h2 {
     color: #4a5568;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     font-size: 1.8rem;
     border-bottom: 3px solid #667eea;
     padding-bottom: 10px;
@@ -129,14 +131,14 @@ body {
 .card p {
     line-height: 1.7;
     color: #4a5568;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 /* Problem Statement */
 .problem-highlight {
     background: linear-gradient(135deg, #ff6b6b, #ee5a24);
     color: white;
-    padding: 25px;
+    padding: 2px;
     border-radius: 12px;
     margin: 20px 0;
     text-align: center;
