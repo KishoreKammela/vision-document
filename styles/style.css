@@ -11,7 +11,21 @@ body {
     animation: gradientShift 15s ease infinite;
     color: #333;
     overflow-x: hidden;
-    min-height: 100vh;
+    height: 100vh;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox, Safari 18.2+, Chromium 121+ */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Older Safari and Chromium */
+}
+
+/* Smooth scrolling for tab navigation */
+.scroll-smooth {
+  scroll-behavior: smooth;
 }
 
 @keyframes gradientShift {
@@ -95,6 +109,8 @@ body {
     backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    position:stick;
+    top:10px;
 }
 
 .nav-btn {
@@ -148,6 +164,8 @@ body {
 
 .section.active {
     display: block;
+    position: sticky;
+    top: 240px;
 }
 
 @keyframes slideInUp {
@@ -170,7 +188,9 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2);
     margin-bottom: 32px;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y:scroll;
+    height: calc(90vh - 105px);
 }
 
 .card::before {
