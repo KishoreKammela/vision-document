@@ -1,585 +1,1500 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JobBoardly: Future of Job Matching</title>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
-    <div class="container">
-        <!-- Hero Section -->
-        <div class="hero">
-            <h1>JobBoardly</h1>
-            <p class="subtitle">The Future of Job Matching</p>
-            <p class="tagline">Connecting the right people with the right opportunities</p>
-        </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JobBoardly: Future of Job Matching</title>
+		<link rel="stylesheet" href="./styles/style.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
 
-        <!-- Navigation -->
-        <div class="nav">
-            <button class="nav-btn active" onclick="showSection('opportunity')">The Opportunity</button>
-            <button class="nav-btn" onclick="showSection('platform')">Our Platform</button>
-            <button class="nav-btn" onclick="showSection('experience')">User Experience</button>
-            <button class="nav-btn" onclick="showSection('technology')">Technology</button>
-            <button class="nav-btn" onclick="showSection('features')">Feature Roadmap</button>
-            <button class="nav-btn" onclick="showSection('content')">Content Strategy</button>
-            <button class="nav-btn" onclick="showSection('roadmap')">Implementation</button>
-            <button class="nav-btn" onclick="showSection('metrics')">Success Tracking</button>
-        </div>
+			body {
+				font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+				background-size: 400% 400%;
+				animation: gradientShift 15s ease infinite;
+				color: #333;
+				overflow-x: hidden;
+				min-height: 100vh;
+			}
 
-        <!-- Opportunity Section -->
-        <div id="opportunity" class="section active">
-            <div class="card">
-                <h2>🎯 The Opportunity We're Chasing</h2>
-                <div class="problem-highlight">
-                    The job market is broken. Job seekers send applications into black holes. Employers wade through hundreds of irrelevant resumes. Everyone's frustrated, and nobody's getting what they need.
-                </div>
-                <p><strong>We're going to fix that.</strong></p>
-                
-                <h3>Why Now?</h3>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h4>Market Inefficiency</h4>
-                        <p>Traditional job boards are digital classified ads that don't understand context or fit</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>AI Revolution</h4>
-                        <p>Machine learning can now understand resumes, match skills, and predict job fit</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>User Frustration</h4>
-                        <p>Both job seekers and employers are ready for a platform that actually works</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+			@keyframes gradientShift {
+				0% {
+					background-position: 0% 50%;
+				}
+				50% {
+					background-position: 100% 50%;
+				}
+				100% {
+					background-position: 0% 50%;
+				}
+			}
 
-        <!-- Platform Section -->
-        <div id="platform" class="section">
-            <div class="card">
-                <h2>🚀 What We're Building</h2>
-                
-                <h3>A Platform That Actually Thinks</h3>
-                <p>We're designing an AI-powered ecosystem that reads resumes like a seasoned HR professional, matches candidates like an expert recruiter, and learns from every interaction.</p>
-                
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h4>🧠 Smart Resume Understanding</h4>
-                        <p>Our AI extracts skills, understands experience, and helps candidates present themselves in the best light</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>🔍 Intelligent Job Discovery</h4>
-                        <p>Search that goes beyond keywords to understand context, potential, and perfect fit</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>🤝 Seamless Collaboration</h4>
-                        <p>Multiple team members can work together on hiring without stepping on each other's toes</p>
-                    </div>
-                </div>
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 24px;
+			}
 
-                <h3>Competitive Advantage</h3>
-                <p>While other platforms are digital classified ads, we're building something that actually understands the job market. Our AI capabilities create barriers to entry that traditional job boards simply can't match.</p>
-            </div>
-        </div>
+			/* Hero Section */
+			.hero {
+				text-align: center;
+				padding: 60px 40px;
+				background: rgba(255, 255, 255, 0.15);
+				backdrop-filter: blur(20px);
+				border-radius: 32px;
+				margin-bottom: 48px;
+				box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				position: relative;
+				overflow: hidden;
+			}
 
-        <!-- User Experience Section -->
-        <div id="experience" class="section">
-            <div class="card">
-                <h2>💫 The User Experience We're Creating</h2>
-                
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h4>👤 Job Seekers Feel Empowered</h4>
-                        <p>• AI-assisted profiles that highlight their best qualities<br>
-                           • Job recommendations that actually make sense<br>
-                           • Transparent application process<br>
-                           • Professional storytelling, not just history</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>🏢 Employers Feel Efficient</h4>
-                        <p>• Quality candidates instead of application spam<br>
-                           • Seamless team collaboration<br>
-                           • Data-driven hiring insights<br>
-                           • Company branding that attracts talent</p>
-                    </div>
-                </div>
+			.hero::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+				pointer-events: none;
+			}
 
-                <h3>Building Meaningful Connections</h3>
-                <p>This isn't just about filling positions—it's about creating meaningful professional relationships. When the right people find the right opportunities, everyone wins.</p>
-            </div>
-        </div>
+			.hero h1 {
+				font-size: clamp(2.5rem, 5vw, 4rem);
+				font-weight: 800;
+				color: white;
+				margin-bottom: 24px;
+				text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+				background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
 
-        <!-- Technology Section -->
-        <div id="technology" class="section">
-            <div class="card">
-                <h2>⚙️ The Technology Foundation</h2>
-                
-                <h3>AI That Enhances Human Judgment</h3>
-                <p>Our AI won't replace human decision-making—it'll supercharge it. But the final decisions? Those stay human.</p>
-                
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h4>🔧 Resume Parsing</h4>
-                        <p>Automatically extract and organize candidate information, saving hours of manual data entry</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>🎯 Smart Matching</h4>
-                        <p>Surface opportunities and candidates that might otherwise be missed through intelligent algorithms</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>📝 Professional Summaries</h4>
-                        <p>Help people articulate their value proposition with AI-generated professional summaries</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>📱 Mobile-First Design</h4>
-                        <p>Beautiful, seamless experience across all devices - apply from your phone during lunch break</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>🔒 Security & Trust</h4>
-                        <p>User data protection without friction - secure authentication people actually want to use</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>📊 Data Intelligence</h4>
-                        <p>Every interaction generates insights about job market trends, skills demand, and hiring patterns</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+			.hero .subtitle {
+				font-size: 1.5rem;
+				color: rgba(255, 255, 255, 0.95);
+				margin-bottom: 16px;
+				font-weight: 600;
+			}
 
-        <!-- Features Section -->
-        <div id="features" class="section">
-            <div class="card">
-                <h2>🚀 Comprehensive Feature Roadmap</h2>
-                
-                <div class="roadmap-intro">
-                    <p>Our platform will evolve from a career intelligence hub to a comprehensive talent ecosystem, with AI at the core of every interaction.</p>
-                </div>
+			.hero .tagline {
+				font-size: 1.1rem;
+				color: rgba(255, 255, 255, 0.85);
+				font-style: italic;
+				font-weight: 400;
+			}
 
-                <h3>For Job Seekers</h3>
-                <div class="features-category">
-                    <div class="feature-priority-grid">
-                        <div class="feature-item launch">
-                            <span class="priority-badge launch">Launch</span>
-                            <h4>Smart Profile Builder</h4>
-                            <p>AI-powered resume parsing and profile optimization with dynamic summary generation</p>
-                        </div>
-                        <div class="feature-item launch">
-                            <span class="priority-badge launch">Launch</span>
-                            <h4>Intelligent Career Matching</h4>
-                            <p>Advanced matching algorithms considering skills, preferences, and notice period</p>
-                        </div>
-                        <div class="feature-item growth">
-                            <span class="priority-badge growth">Growth</span>
-                            <h4>AI Career Path Advisor</h4>
-                            <p>Personalized career trajectory analysis with skill gap identification and learning recommendations</p>
-                        </div>
-                        <div class="feature-item growth">
-                            <span class="priority-badge growth">Growth</span>
-                            <h4>Interview Preparation Suite</h4>
-                            <p>Company-specific interview prep, mock interviews, and behavioral question coaching</p>
-                        </div>
-                        <div class="feature-item scale">
-                            <span class="priority-badge scale">Scale</span>
-                            <h4>AI Career Coach</h4>
-                            <p>Continuous performance analysis, networking suggestions, and market trend alerts</p>
-                        </div>
-                        <div class="feature-item scale">
-                            <span class="priority-badge scale">Scale</span>
-                            <h4>Personal Brand Optimizer</h4>
-                            <p>LinkedIn sync, content suggestions, and automated portfolio website generation</p>
-                        </div>
-                    </div>
-                </div>
+			/* Navigation */
+			.nav {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				gap: 12px;
+				margin-bottom: 48px;
+				padding: 20px;
+				background: rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(10px);
+				border-radius: 20px;
+				border: 1px solid rgba(255, 255, 255, 0.2);
+			}
 
-                <h3>For Employers</h3>
-                <div class="features-category">
-                    <div class="feature-priority-grid">
-                        <div class="feature-item launch">
-                            <span class="priority-badge launch">Launch</span>
-                            <h4>AI Job Description Parser</h4>
-                            <p>Intelligent parsing and optimization of job postings with bias detection</p>
-                        </div>
-                        <div class="feature-item launch">
-                            <span class="priority-badge launch">Launch</span>
-                            <h4>Smart Candidate Sourcing</h4>
-                            <p>Advanced search with AI-powered candidate matching and success prediction</p>
-                        </div>
-                        <div class="feature-item growth">
-                            <span class="priority-badge growth">Growth</span>
-                            <h4>Automated Screening System</h4>
-                            <p>AI analysis of applications, screening questions, and portfolio evaluation</p>
-                        </div>
-                        <div class="feature-item growth">
-                            <span class="priority-badge growth">Growth</span>
-                            <h4>Multi-dimensional Candidate Scoring</h4>
-                            <p>Technical skills, cultural fit, and career progression analysis</p>
-                        </div>
-                        <div class="feature-item scale">
-                            <span class="priority-badge scale">Scale</span>
-                            <h4>Recruitment Analytics AI</h4>
-                            <p>Hiring process optimization, source effectiveness analysis, and market intelligence</p>
-                        </div>
-                        <div class="feature-item scale">
-                            <span class="priority-badge scale">Scale</span>
-                            <h4>Predictive Hiring Models</h4>
-                            <p>Success prediction, flight risk assessment, and automated reference analysis</p>
-                        </div>
-                    </div>
-                </div>
+			.nav-btn {
+				background: rgba(255, 255, 255, 0.2);
+				border: 1px solid rgba(255, 255, 255, 0.3);
+				padding: 12px 20px;
+				border-radius: 20px;
+				color: white;
+				cursor: pointer;
+				transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+				backdrop-filter: blur(10px);
+				font-weight: 500;
+				font-size: 0.9rem;
+				position: relative;
+				overflow: hidden;
+			}
 
-                <h3>Platform Intelligence</h3>
-                <div class="features-category">
-                    <div class="feature-priority-grid">
-                        <div class="feature-item launch">
-                            <span class="priority-badge launch">Launch</span>
-                            <h4>Admin Dashboard Suite</h4>
-                            <p>Comprehensive content management, user moderation, and analytics overview</p>
-                        </div>
-                        <div class="feature-item launch">
-                            <span class="priority-badge launch">Launch</span>
-                            <h4>Feature Toggle System</h4>
-                            <p>Dynamic feature management for controlled rollouts and A/B testing</p>
-                        </div>
-                        <div class="feature-item growth">
-                            <span class="priority-badge growth">Growth</span>
-                            <h4>Conversational AI Assistant</h4>
-                            <p>24/7 platform support, career guidance, and intelligent help system</p>
-                        </div>
-                        <div class="feature-item growth">
-                            <span class="priority-badge growth">Growth</span>
-                            <h4>Predictive Analytics Engine</h4>
-                            <p>Market trend analysis, skill demand forecasting, and success pattern recognition</p>
-                        </div>
-                        <div class="feature-item scale">
-                            <span class="priority-badge scale">Scale</span>
-                            <h4>Advanced Behavioral Matching</h4>
-                            <p>Work style compatibility, cultural fit analysis, and success prediction models</p>
-                        </div>
-                        <div class="feature-item scale">
-                            <span class="priority-badge scale">Scale</span>
-                            <h4>Market Intelligence Hub</h4>
-                            <p>Real-time salary trends, competitor analysis, and industry forecasting</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+			.nav-btn::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -100%;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+				transition: left 0.5s;
+			}
 
-        <!-- Content Strategy Section -->
-        <div id="content" class="section">
-            <div class="card">
-                <h2>📝 Content Strategy & Brand Building</h2>
-                
-                <div class="strategy-overview">
-                    <p>Positioning as the definitive career intelligence platform through strategic content that establishes thought leadership and drives organic discovery.</p>
-                </div>
+			.nav-btn:hover::before {
+				left: 100%;
+			}
 
-                <h3>Content Pillars</h3>
-                <div class="content-pillars">
-                    <div class="pillar-card">
-                        <h4>🎯 Career Intelligence</h4>
-                        <p>Data-driven insights on job market trends, salary analysis, and skill demand forecasting</p>
-                        <div class="content-examples">
-                            <span>Market Reports</span>
-                            <span>Salary Benchmarks</span>
-                            <span>Skills Analysis</span>
-                        </div>
-                    </div>
-                    <div class="pillar-card">
-                        <h4>🚀 Professional Development</h4>
-                        <p>Actionable career growth strategies, learning paths, and skill development guidance</p>
-                        <div class="content-examples">
-                            <span>Growth Frameworks</span>
-                            <span>Learning Roadmaps</span>
-                            <span>Skill Assessments</span>
-                        </div>
-                    </div>
-                    <div class="pillar-card">
-                        <h4>🤖 AI & Future of Work</h4>
-                        <p>Expert analysis on AI's impact on careers, emerging roles, and workplace transformation</p>
-                        <div class="content-examples">
-                            <span>AI Impact Studies</span>
-                            <span>Future Role Predictions</span>
-                            <span>Workplace Evolution</span>
-                        </div>
-                    </div>
-                    <div class="pillar-card">
-                        <h4>💼 Industry Deep Dives</h4>
-                        <p>Comprehensive analysis of specific industries, roles, and career pathways</p>
-                        <div class="content-examples">
-                            <span>Industry Reports</span>
-                            <span>Role Breakdowns</span>
-                            <span>Career Pathways</span>
-                        </div>
-                    </div>
-                </div>
+			.nav-btn:hover,
+			.nav-btn.active {
+				background: rgba(255, 255, 255, 0.3);
+				transform: translateY(-2px) scale(1.05);
+				box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+				border-color: rgba(255, 255, 255, 0.5);
+			}
 
-                <h3>9-Month Content Calendar</h3>
-                <div class="content-calendar">
-                    <div class="calendar-phase">
-                        <h4>Phase 1: Foundation (Months 1-3)</h4>
-                        <div class="phase-content">
-                            <div class="content-track">
-                                <strong>Blog Articles (2/week):</strong> Career fundamentals, skill development guides, industry primers
-                            </div>
-                            <div class="content-track">
-                                <strong>Video Content (1/week):</strong> Expert interviews, career advice sessions, market analysis
-                            </div>
-                            <div class="content-track">
-                                <strong>Infographics (2/month):</strong> Salary trends, skill maps, career progression charts
-                            </div>
-                        </div>
-                    </div>
-                    <div class="calendar-phase">
-                        <h4>Phase 2: Authority (Months 4-6)</h4>
-                        <div class="phase-content">
-                            <div class="content-track">
-                                <strong>Blog Articles (3/week):</strong> Advanced career strategies, AI impact analysis, exclusive research
-                            </div>
-                            <div class="content-track">
-                                <strong>Video Content (2/week):</strong> Webinar series, industry leader conversations, tool demonstrations
-                            </div>
-                            <div class="content-track">
-                                <strong>Podcasts (1/week):</strong> Career conversations, industry insights, expert roundtables
-                            </div>
-                        </div>
-                    </div>
-                    <div class="calendar-phase">
-                        <h4>Phase 3: Leadership (Months 7-9)</h4>
-                        <div class="phase-content">
-                            <div class="content-track">
-                                <strong>Comprehensive Guides:</strong> Industry career handbooks, skill development frameworks
-                            </div>
-                            <div class="content-track">
-                                <strong>Interactive Tools:</strong> Career assessment quizzes, salary calculators, skill gap analyzers
-                            </div>
-                            <div class="content-track">
-                                <strong>Thought Leadership:</strong> Original research reports, market predictions, trend analysis
-                            </div>
-                        </div>
-                    </div>
-                </div>
+			.nav-btn.active {
+				background: rgba(255, 255, 255, 0.4);
+				font-weight: 600;
+			}
 
-                <h3>SEO & Discovery Strategy</h3>
-                <div class="seo-strategy">
-                    <div class="seo-focus">
-                        <h4>🎯 Keyword Targeting</h4>
-                        <div class="keyword-categories">
-                            <div class="keyword-group">
-                                <strong>Career Intelligence:</strong>
-                                <span>"career path analysis," "skill demand trends," "salary benchmarking"</span>
-                            </div>
-                            <div class="keyword-group">
-                                <strong>Professional Growth:</strong>
-                                <span>"career development framework," "professional skill assessment," "growth strategies"</span>
-                            </div>
-                            <div class="keyword-group">
-                                <strong>AI & Careers:</strong>
-                                <span>"AI impact on jobs," "future of work," "career automation"</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="seo-tactics">
-                        <h4>📈 Organic Growth Tactics</h4>
-                        <ul>
-                            <li>Long-form authoritative content (3000+ words)</li>
-                            <li>Interactive tools and calculators for backlink attraction</li>
-                            <li>Expert contributor network for content amplification</li>
-                            <li>Strategic internal linking for topic authority</li>
-                            <li>Schema markup for enhanced search visibility</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+			/* Content Sections */
+			.section {
+				display: none;
+				animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+			}
 
-        <!-- Roadmap Section -->
-        <div id="roadmap" class="section">
-            <div class="card">
-                <h2>🗺️ Implementation Roadmap</h2>
-                
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Phase 1: Foundation</h3>
-                            <p>Core user experiences - profile creation, job posting, and basic matching. Laying the groundwork for everything that comes next.</p>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Phase 2: Intelligence</h3>
-                            <p>AI features roll out gradually. Resume parsing first, then job matching, then professional summary generation. Each feature tested and refined.</p>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Phase 3: Optimization</h3>
-                            <p>Advanced features like saved searches, detailed analytics, and sophisticated matching algorithms. This is where we separate from competition.</p>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Phase 4: Expansion</h3>
-                            <p>Multi-recruiter systems, company branding features, and administrative tools that scale with our growth.</p>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+			.section.active {
+				display: block;
+			}
 
-        <!-- Metrics Section -->
-        <div id="metrics" class="section">
-            <div class="card">
-                <h2>📈 Success Metrics & Tracking</h2>
-                
-                <h3>Brand Awareness Metrics</h3>
-                <div class="metrics-grid">
-                    <div class="metric-card">
-                        <h4>🌐 Domain Authority Growth</h4>
-                        <p>Target: 30+ DA within 9 months through high-quality content and backlinks</p>
-                    </div>
-                    <div class="metric-card">
-                        <h4>🔍 Brand Search Volume</h4>
-                        <p>Track branded keyword searches and brand mention growth across platforms</p>
-                    </div>
-                    <div class="metric-card">
-                        <h4>📊 Organic Visibility</h4>
-                        <p>Monitor rankings for 500+ target keywords related to career intelligence</p>
-                    </div>
-                </div>
+			@keyframes slideInUp {
+				from {
+					opacity: 0;
+					transform: translateY(30px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
 
-                <h3>Content Engagement Metrics</h3>
-                <div class="metrics-grid">
-                    <div class="metric-card">
-                        <h4>⏱️ Time on Site</h4>
-                        <p>Target: 4+ minutes average session duration with 60%+ return visitor rate</p>
-                    </div>
-                    <div class="metric-card">
-                        <h4>📈 Content Performance</h4>
-                        <p>Track shares, comments, backlinks, and content-specific conversion rates</p>
-                    </div>
-                    <div class="metric-card">
-                        <h4>🎯 Topic Authority</h4>
-                        <p>Measure content ranking performance and topic cluster authority</p>
-                    </div>
-                </div>
+			.card {
+				background: rgba(255, 255, 255, 0.95);
+				backdrop-filter: blur(20px);
+				border-radius: 24px;
+				padding: 40px;
+				box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				margin-bottom: 32px;
+				position: relative;
+				overflow: hidden;
+			}
 
-                <h3>Lead Generation Metrics</h3>
-                <div class="metrics-grid">
-                    <div class="metric-card">
-                        <h4>📧 Email Subscriptions</h4>
-                        <p>Target: 10K+ qualified subscribers through content lead magnets</p>
-                    </div>
-                    <div class="metric-card">
-                        <h4>📚 Content Downloads</h4>
-                        <p>Track guide downloads, tool usage, and content engagement depth</p>
-                    </div>
-                    <div class="metric-card">
-                        <h4>🔄 Conversion Funnel</h4>
-                        <p>Monitor visitor-to-lead-to-user conversion rates across content types</p>
-                    </div>
-                </div>
+			.card::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 4px;
+				background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+				background-size: 200% 100%;
+				animation: shimmer 3s linear infinite;
+			}
 
-                <h3>Competitive Benchmarking</h3>
-                <div class="competitive-metrics">
-                    <div class="benchmark-item">
-                        <h4>Content Volume & Quality</h4>
-                        <p>Compare content output, engagement rates, and search visibility against leading career advice platforms</p>
-                    </div>
-                    <div class="benchmark-item">
-                        <h4>Audience Growth Rate</h4>
-                        <p>Track growth velocity compared to established career platforms and emerging competitors</p>
-                    </div>
-                    <div class="benchmark-item">
-                        <h4>Market Share of Voice</h4>
-                        <p>Measure share of conversations around career intelligence and AI in professional development</p>
-                    </div>
-                </div>
+			@keyframes shimmer {
+				0% {
+					background-position: -200% 0;
+				}
+				100% {
+					background-position: 200% 0;
+				}
+			}
 
-                <h3>Content Production Workflow</h3>
-                <div class="workflow-section">
-                    <div class="workflow-tools">
-                        <h4>🛠️ Tools & Platforms</h4>
-                        <div class="tools-grid">
-                            <span>Content Planning: Airtable, Notion</span>
-                            <span>SEO Research: SEMrush, Ahrefs</span>
-                            <span>Design: Canva Pro, Figma</span>
-                            <span>Video: Loom, Riverside.fm</span>
-                            <span>Analytics: GA4, Search Console</span>
-                            <span>Social Media: Buffer, LinkedIn Publisher</span>
-                        </div>
-                    </div>
-                    <div class="workflow-process">
-                        <h4>📋 Production Process</h4>
-                        <ol>
-                            <li><strong>Research & Planning:</strong> Keyword research, topic validation, content brief creation</li>
-                            <li><strong>Content Creation:</strong> Writing, design, video production with SEO optimization</li>
-                            <li><strong>Review & Optimization:</strong> Editorial review, SEO audit, performance prediction</li>
-                            <li><strong>Distribution:</strong> Multi-channel publishing, social amplification, influencer outreach</li>
-                            <li><strong>Analysis & Iteration:</strong> Performance tracking, optimization, and strategy refinement</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active');
-            });
-            // Remove active class from all nav buttons
-            document.querySelectorAll('.nav-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            // Show selected section
-            document.getElementById(sectionId).classList.add('active');
-            // Add active class to clicked button
-            event.target.classList.add('active');
-            // Smooth scroll to top of content
-            document.querySelector('.nav').scrollIntoView({ behavior: 'smooth' });
-        }
+			.card h2 {
+				font-size: 2.2rem;
+				font-weight: 700;
+				color: #2d3748;
+				margin-bottom: 24px;
+				display: flex;
+				align-items: center;
+				gap: 12px;
+			}
 
-        // Add some interactive animations
-        document.addEventListener('DOMContentLoaded', function () {
-            // Animate cards on scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-            document.querySelectorAll('.card, .feature-card, .metric-card').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(el);
-            });
-            // Add hover effects to timeline items
-            document.querySelectorAll('.timeline-item').forEach(item => {
-                item.addEventListener('mouseenter', function () {
-                    this.style.transform = 'scale(1.02)';
-                });
-                item.addEventListener('mouseleave', function () {
-                    this.style.transform = 'scale(1)';
-                });
-            });
-        });
-    </script>
-</body>
+			.card h3 {
+				font-size: 1.5rem;
+				font-weight: 600;
+				color: #4a5568;
+				margin: 32px 0 20px 0;
+				position: relative;
+			}
+
+			.card h3::after {
+				content: '';
+				position: absolute;
+				bottom: -8px;
+				left: 0;
+				width: 50px;
+				height: 3px;
+				background: linear-gradient(90deg, #667eea, #764ba2);
+				border-radius: 2px;
+			}
+
+			.card p {
+				line-height: 1.7;
+				color: #4a5568;
+				margin-bottom: 16px;
+				font-size: 1rem;
+			}
+
+			/* Problem Highlight */
+			.problem-highlight {
+				background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+				color: white;
+				padding: 24px;
+				border-radius: 16px;
+				font-size: 1.1rem;
+				font-weight: 500;
+				margin: 24px 0;
+				box-shadow: 0 8px 25px rgba(238, 90, 36, 0.3);
+				position: relative;
+				overflow: hidden;
+			}
+
+			.problem-highlight::before {
+				content: '';
+				position: absolute;
+				top: -2px;
+				left: -2px;
+				right: -2px;
+				bottom: -2px;
+				background: linear-gradient(45deg, #ff6b6b, #ee5a24, #ff6b6b);
+				border-radius: 18px;
+				z-index: -1;
+				animation: rotate 3s linear infinite;
+			}
+
+			@keyframes rotate {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+
+			/* Features Grid */
+			.features-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 24px;
+				margin: 32px 0;
+			}
+
+			.feature-card {
+				background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+				backdrop-filter: blur(10px);
+				padding: 28px;
+				border-radius: 20px;
+				box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+				border: 1px solid rgba(255, 255, 255, 0.3);
+				transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+				position: relative;
+				overflow: hidden;
+			}
+
+			.feature-card::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 2px;
+				background: linear-gradient(90deg, #667eea, #764ba2);
+				transform: scaleX(0);
+				transition: transform 0.3s ease;
+			}
+
+			.feature-card:hover {
+				transform: translateY(-8px) scale(1.02);
+				box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+			}
+
+			.feature-card:hover::before {
+				transform: scaleX(1);
+			}
+
+			.feature-card h4 {
+				font-size: 1.2rem;
+				font-weight: 600;
+				color: #2d3748;
+				margin-bottom: 12px;
+				display: flex;
+				align-items: center;
+				gap: 8px;
+			}
+
+			.feature-card p {
+				color: #4a5568;
+				line-height: 1.6;
+				font-size: 0.95rem;
+			}
+
+			/* Feature Priority Grid */
+			.feature-priority-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 20px;
+				margin: 24px 0;
+			}
+
+			.feature-item {
+				background: rgba(255, 255, 255, 0.9);
+				padding: 24px;
+				border-radius: 16px;
+				border-left: 4px solid #667eea;
+				transition: all 0.3s ease;
+				position: relative;
+			}
+
+			.feature-item:hover {
+				transform: translateX(8px);
+				box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+			}
+
+			.priority-badge {
+				display: inline-block;
+				padding: 4px 12px;
+				border-radius: 20px;
+				font-size: 0.8rem;
+				font-weight: 600;
+				margin-bottom: 12px;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+
+			.priority-badge.launch {
+				background: linear-gradient(135deg, #10b981, #059669);
+				color: white;
+			}
+
+			.priority-badge.growth {
+				background: linear-gradient(135deg, #f59e0b, #d97706);
+				color: white;
+			}
+
+			.priority-badge.scale {
+				background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+				color: white;
+			}
+
+			.feature-item h4 {
+				font-size: 1.1rem;
+				font-weight: 600;
+				color: #1f2937;
+				margin-bottom: 8px;
+			}
+
+			.feature-item p {
+				color: #6b7280;
+				font-size: 0.9rem;
+				line-height: 1.5;
+			}
+
+			/* Content Strategy Styles */
+			.strategy-overview {
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+				padding: 24px;
+				border-radius: 16px;
+				margin: 24px 0;
+				font-size: 1.1rem;
+				line-height: 1.6;
+			}
+
+			.content-pillars {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 20px;
+				margin: 24px 0;
+			}
+
+			.pillar-card {
+				background: rgba(255, 255, 255, 0.9);
+				padding: 24px;
+				border-radius: 16px;
+				border-top: 4px solid #667eea;
+				transition: all 0.3s ease;
+			}
+
+			.pillar-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+			}
+
+			.pillar-card h4 {
+				font-size: 1.2rem;
+				font-weight: 600;
+				color: #1f2937;
+				margin-bottom: 12px;
+			}
+
+			.content-examples {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+				margin-top: 16px;
+			}
+
+			.content-examples span {
+				background: #e5e7eb;
+				color: #374151;
+				padding: 4px 12px;
+				border-radius: 12px;
+				font-size: 0.8rem;
+				font-weight: 500;
+			}
+
+			/* Timeline Styles */
+			.timeline {
+				position: relative;
+				margin: 40px 0;
+			}
+
+			.timeline::before {
+				content: '';
+				position: absolute;
+				left: 30px;
+				top: 0;
+				bottom: 0;
+				width: 2px;
+				background: linear-gradient(180deg, #667eea, #764ba2);
+			}
+
+			.timeline-item {
+				position: relative;
+				margin-bottom: 40px;
+				padding-left: 80px;
+				transition: all 0.3s ease;
+			}
+
+			.timeline-item:hover {
+				transform: scale(1.02);
+			}
+
+			.timeline-dot {
+				position: absolute;
+				left: 20px;
+				top: 10px;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background: linear-gradient(135deg, #667eea, #764ba2);
+				border: 4px solid white;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				z-index: 2;
+			}
+
+			.timeline-content {
+				background: rgba(255, 255, 255, 0.9);
+				padding: 24px;
+				border-radius: 16px;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+			}
+
+			.timeline-content h3 {
+				color: #1f2937;
+				margin-bottom: 12px;
+				font-size: 1.3rem;
+			}
+
+			/* Metrics Grid */
+			.metrics-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 20px;
+				margin: 24px 0;
+			}
+
+			.metric-card {
+				background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+				padding: 24px;
+				border-radius: 16px;
+				border: 1px solid rgba(255, 255, 255, 0.3);
+				backdrop-filter: blur(10px);
+				transition: all 0.3s ease;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.metric-card::before {
+				content: '';
+				position: absolute;
+				top: -2px;
+				left: -2px;
+				right: -2px;
+				bottom: -2px;
+				background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #667eea);
+				background-size: 400% 400%;
+				border-radius: 18px;
+				z-index: -1;
+				animation: gradientBorder 3s ease infinite;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+
+			.metric-card:hover::before {
+				opacity: 1;
+			}
+
+			@keyframes gradientBorder {
+				0% {
+					background-position: 0% 50%;
+				}
+				50% {
+					background-position: 100% 50%;
+				}
+				100% {
+					background-position: 0% 50%;
+				}
+			}
+
+			.metric-card:hover {
+				transform: translateY(-4px) scale(1.02);
+				box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+			}
+
+			.metric-card h4 {
+				font-size: 1.1rem;
+				font-weight: 600;
+				color: #1f2937;
+				margin-bottom: 12px;
+				display: flex;
+				align-items: center;
+				gap: 8px;
+			}
+
+			/* Content Calendar */
+			.content-calendar {
+				margin: 32px 0;
+			}
+
+			.calendar-phase {
+				background: rgba(255, 255, 255, 0.9);
+				margin: 20px 0;
+				padding: 24px;
+				border-radius: 16px;
+				border-left: 4px solid #667eea;
+			}
+
+			.calendar-phase h4 {
+				color: #1f2937;
+				font-size: 1.2rem;
+				margin-bottom: 16px;
+			}
+
+			.content-track {
+				margin: 12px 0;
+				padding: 12px;
+				background: #f9fafb;
+				border-radius: 8px;
+			}
+
+			.content-track strong {
+				color: #374151;
+			}
+
+			/* SEO Strategy */
+			.seo-strategy {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 24px;
+				margin: 32px 0;
+			}
+
+			.seo-focus,
+			.seo-tactics {
+				background: rgba(255, 255, 255, 0.9);
+				padding: 24px;
+				border-radius: 16px;
+			}
+
+			.keyword-group {
+				margin: 12px 0;
+				padding: 16px;
+				background: #f8fafc;
+				border-radius: 8px;
+				border-left: 3px solid #667eea;
+			}
+
+			.keyword-group strong {
+				display: block;
+				color: #1f2937;
+				margin-bottom: 8px;
+			}
+
+			.keyword-group span {
+				color: #6b7280;
+				font-style: italic;
+			}
+
+			.seo-tactics ul {
+				list-style: none;
+				padding-left: 0;
+			}
+
+			.seo-tactics li {
+				padding: 8px 0;
+				position: relative;
+				padding-left: 24px;
+			}
+
+			.seo-tactics li::before {
+				content: '✓';
+				position: absolute;
+				left: 0;
+				color: #10b981;
+				font-weight: bold;
+			}
+
+			/* Competitive Metrics */
+			.competitive-metrics {
+				margin: 32px 0;
+			}
+
+			.benchmark-item {
+				background: rgba(255, 255, 255, 0.9);
+				padding: 20px;
+				margin: 16px 0;
+				border-radius: 12px;
+				border-left: 4px solid #f59e0b;
+			}
+
+			.benchmark-item h4 {
+				color: #1f2937;
+				margin-bottom: 8px;
+			}
+
+			/* Workflow Section */
+			.workflow-section {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 24px;
+				margin: 32px 0;
+			}
+
+			.workflow-tools,
+			.workflow-process {
+				background: rgba(255, 255, 255, 0.9);
+				padding: 24px;
+				border-radius: 16px;
+			}
+
+			.tools-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+				gap: 12px;
+				margin-top: 16px;
+			}
+
+			.tools-grid span {
+				background: #e5e7eb;
+				padding: 8px 12px;
+				border-radius: 8px;
+				font-size: 0.9rem;
+				text-align: center;
+			}
+
+			.workflow-process ol {
+				padding-left: 20px;
+			}
+
+			.workflow-process li {
+				margin: 12px 0;
+				line-height: 1.6;
+			}
+
+			.workflow-process strong {
+				color: #1f2937;
+			}
+
+			/* Responsive Design */
+			@media (max-width: 768px) {
+				.container {
+					padding: 16px;
+				}
+
+				.hero {
+					padding: 40px 24px;
+					margin-bottom: 32px;
+				}
+
+				.hero h1 {
+					font-size: 2.5rem;
+				}
+
+				.nav {
+					gap: 8px;
+					padding: 16px;
+				}
+
+				.nav-btn {
+					padding: 10px 16px;
+					font-size: 0.85rem;
+				}
+
+				.card {
+					padding: 24px;
+				}
+
+				.features-grid {
+					grid-template-columns: 1fr;
+					gap: 16px;
+				}
+
+				.timeline::before {
+					left: 15px;
+				}
+
+				.timeline-item {
+					padding-left: 50px;
+				}
+
+				.timeline-dot {
+					left: 5px;
+					width: 16px;
+					height: 16px;
+				}
+			}
+
+			/* Loading Animation */
+			.loading {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				z-index: 9999;
+				transition: opacity 0.5s ease;
+			}
+
+			.loading-spinner {
+				width: 50px;
+				height: 50px;
+				border: 3px solid rgba(255, 255, 255, 0.3);
+				border-top: 3px solid white;
+				border-radius: 50%;
+				animation: spin 1s linear infinite;
+			}
+
+			@keyframes spin {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+
+			.loading.fade-out {
+				opacity: 0;
+				pointer-events: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="loading" id="loading">
+			<div class="loading-spinner"></div>
+		</div>
+
+		<div class="container">
+			<!-- Hero Section -->
+			<div class="hero animate__animated animate__fadeInDown">
+				<h1>JobBoardly</h1>
+				<p class="subtitle">The Future of Job Matching</p>
+				<p class="tagline">Connecting the right people with the right opportunities</p>
+			</div>
+
+			<!-- Navigation -->
+			<div class="nav animate__animated animate__fadeInUp animate__delay-1s">
+				<button class="nav-btn active" onclick="showSection('opportunity')">The Opportunity</button>
+				<button class="nav-btn" onclick="showSection('platform')">Our Platform</button>
+				<button class="nav-btn" onclick="showSection('experience')">User Experience</button>
+				<button class="nav-btn" onclick="showSection('technology')">Technology</button>
+				<button class="nav-btn" onclick="showSection('features')">Feature Roadmap</button>
+				<button class="nav-btn" onclick="showSection('content')">Content Strategy</button>
+				<button class="nav-btn" onclick="showSection('roadmap')">Implementation</button>
+				<button class="nav-btn" onclick="showSection('metrics')">Success Tracking</button>
+			</div>
+
+			<!-- Opportunity Section -->
+			<div id="opportunity" class="section active">
+				<div class="card">
+					<h2>🎯 The Opportunity We're Chasing</h2>
+					<div class="problem-highlight">
+						The job market is broken. Job seekers send applications into black holes. Employers wade through
+						hundreds of irrelevant resumes. Everyone's frustrated, and nobody's getting what they need.
+					</div>
+					<p><strong>We're going to fix that.</strong></p>
+
+					<h3>Why Now?</h3>
+					<div class="features-grid">
+						<div class="feature-card">
+							<h4>Market Inefficiency</h4>
+							<p>
+								Traditional job boards are digital classified ads that don't understand context or fit
+							</p>
+						</div>
+						<div class="feature-card">
+							<h4>AI Revolution</h4>
+							<p>Machine learning can now understand resumes, match skills, and predict job fit</p>
+						</div>
+						<div class="feature-card">
+							<h4>User Frustration</h4>
+							<p>Both job seekers and employers are ready for a platform that actually works</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Platform Section -->
+			<div id="platform" class="section">
+				<div class="card">
+					<h2>🚀 What We're Building</h2>
+
+					<h3>A Platform That Actually Thinks</h3>
+					<p>
+						We're designing an AI-powered ecosystem that reads resumes like a seasoned HR professional,
+						matches candidates like an expert recruiter, and learns from every interaction.
+					</p>
+
+					<div class="features-grid">
+						<div class="feature-card">
+							<h4>🧠 Smart Resume Understanding</h4>
+							<p>
+								Our AI extracts skills, understands experience, and helps candidates present themselves
+								in the best light
+							</p>
+						</div>
+						<div class="feature-card">
+							<h4>🔍 Intelligent Job Discovery</h4>
+							<p>Search that goes beyond keywords to understand context, potential, and perfect fit</p>
+						</div>
+						<div class="feature-card">
+							<h4>🤝 Seamless Collaboration</h4>
+							<p>
+								Multiple team members can work together on hiring without stepping on each other's toes
+							</p>
+						</div>
+					</div>
+
+					<h3>Competitive Advantage</h3>
+					<p>
+						While other platforms are digital classified ads, we're building something that actually
+						understands the job market. Our AI capabilities create barriers to entry that traditional job
+						boards simply can't match.
+					</p>
+				</div>
+			</div>
+
+			<!-- User Experience Section -->
+			<div id="experience" class="section">
+				<div class="card">
+					<h2>💫 The User Experience We're Creating</h2>
+
+					<div class="features-grid">
+						<div class="feature-card">
+							<h4>👤 Job Seekers Feel Empowered</h4>
+							<p>
+								• AI-assisted profiles that highlight their best qualities<br />
+								• Job recommendations that actually make sense<br />
+								• Transparent application process<br />
+								• Professional storytelling, not just history
+							</p>
+						</div>
+						<div class="feature-card">
+							<h4>🏢 Employers Feel Efficient</h4>
+							<p>
+								• Quality candidates instead of application spam<br />
+								• Seamless team collaboration<br />
+								• Data-driven hiring insights<br />
+								• Company branding that attracts talent
+							</p>
+						</div>
+					</div>
+
+					<h3>Building Meaningful Connections</h3>
+					<p>
+						This isn't just about filling positions—it's about creating meaningful professional
+						relationships. When the right people find the right opportunities, everyone wins.
+					</p>
+				</div>
+			</div>
+
+			<!-- Technology Section -->
+			<div id="technology" class="section">
+				<div class="card">
+					<h2>⚙️ The Technology Foundation</h2>
+
+					<h3>AI That Enhances Human Judgment</h3>
+					<p>
+						Our AI won't replace human decision-making—it'll supercharge it. But the final decisions? Those
+						stay human.
+					</p>
+
+					<div class="features-grid">
+						<div class="feature-card">
+							<h4>🔧 Resume Parsing</h4>
+							<p>
+								Automatically extract and organize candidate information, saving hours of manual data
+								entry
+							</p>
+						</div>
+						<div class="feature-card">
+							<h4>🎯 Smart Matching</h4>
+							<p>
+								Surface opportunities and candidates that might otherwise be missed through intelligent
+								algorithms
+							</p>
+						</div>
+						<div class="feature-card">
+							<h4>📝 Professional Summaries</h4>
+							<p>
+								Help people articulate their value proposition with AI-generated professional summaries
+							</p>
+						</div>
+						<div class="feature-card">
+							<h4>📱 Mobile-First Design</h4>
+							<p>
+								Beautiful, seamless experience across all devices - apply from your phone during lunch
+								break
+							</p>
+						</div>
+						<div class="feature-card">
+							<h4>🔒 Security & Trust</h4>
+							<p>
+								User data protection without friction - secure authentication people actually want to
+								use
+							</p>
+						</div>
+						<div class="feature-card">
+							<h4>📊 Data Intelligence</h4>
+							<p>
+								Every interaction generates insights about job market trends, skills demand, and hiring
+								patterns
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Features Section -->
+			<div id="features" class="section">
+				<div class="card">
+					<h2>🚀 Comprehensive Feature Roadmap</h2>
+
+					<div class="roadmap-intro">
+						<p>
+							Our platform will evolve from a career intelligence hub to a comprehensive talent ecosystem,
+							with AI at the core of every interaction.
+						</p>
+					</div>
+
+					<h3>For Job Seekers</h3>
+					<div class="features-category">
+						<div class="feature-priority-grid">
+							<div class="feature-item">
+								<span class="priority-badge launch">Launch</span>
+								<h4>Smart Profile Builder</h4>
+								<p>
+									AI-powered resume parsing and profile optimization with dynamic summary generation
+								</p>
+							</div>
+							<div class="feature-item">
+								<span class="priority-badge launch">Launch</span>
+								<h4>Intelligent Career Matching</h4>
+								<p>Advanced matching algorithms considering skills, preferences, and notice period</p>
+							</div>
+							<div class="feature-item">
+								<span class="priority-badge growth">Growth</span>
+								<h4>AI Career Path Advisor</h4>
+								<p>
+									Personalized career trajectory analysis with skill gap identification and learning
+									recommendations
+								</p>
+							</div>
+							<div class="feature-item">
+								<span class="priority-badge growth">Growth</span>
+								<h4>Interview Preparation Suite</h4>
+								<p>
+									Company-specific interview prep, mock interviews, and behavioral question coaching
+								</p>
+							</div>
+							<div class="feature-item">
+								<span class="priority-badge scale">Scale</span>
+								<h4>AI Career Coach</h4>
+								<p>Continuous performance analysis, networking suggestions, and market trend alerts</p>
+							</div>
+							<div class="feature-item">
+								<span class="priority-badge scale">Scale</span>
+								<h4>Personal Brand Optimizer</h4>
+								<p>LinkedIn sync, content suggestions, and automated portfolio website generation</p>
+							</div>
+						</div>
+					</div>
+
+					<h3>For Employers</h3>
+					<div class="features-category">
+						<div class="feature-priority-grid">
+							<div class="feature-item">
+								<span class="priority-badge launch">Launch</span>
+								<h4>AI Job Description Parser</h4>
+								<p>Intelligent parsing and optimization of job postings with bias detection</p>
+							</div>
+							<div class="feature-item">
+								<span class="priority-badge launch">Launch</span>
+								<h4>Smart Candidate Sourcing</h4>
+								<p>Advanced search with AI-powered candidate matching and success prediction</p>
+							</div>
+							<div class="feature-item">
+								<span class="priority-badge growth">Growth</span>
+								<h4>Automated Screening System</h4>
+								<p>AI analysis of applications, screening questions, and portfolio evaluation</p>
+							</div>
+							<div class="feature-item">
+								<span class="priority-badge growth">Growth</span>
+								<h4>Multi-dimensional Candidate Scoring</h4>
+								<p>Technical skills, cultural fit, and career progression analysis</p>
+							</div>
+							<div class="feature-item">
+								<span class="priority-badge scale">Scale</span>
+								<h4>Recruitment Analytics AI</h4>
+								<p>
+									Hiring process optimization, source effectiveness analysis, and market intelligence
+								</p>
+							</div>
+							<div class="feature-item">
+								<span class="priority-badge scale">Scale</span>
+								<h4>Predictive Hiring Models</h4>
+								<p>Success prediction, flight risk assessment, and automated reference analysis</p>
+							</div>
+						</div>
+					</div>
+
+					<h3>Platform Intelligence</h3>
+					<div class="features-category">
+						<div class="feature-priority-grid">
+							<div class="feature-item">
+								<span class="priority-badge launch">Launch</span>
+								<h4>Admin Dashboard Suite</h4>
+								<p>Comprehensive content management, user moderation, and analytics overview</p>
+							</div>
+							<div class="feature-item">
+								<span class="priority-badge launch">Launch</span>
+								<h4>Feature Toggle System</h4>
+								<p>Dynamic feature management for controlled rollouts and A/B testing</p>
+							</div>
+							<div class="feature-item">
+								<span class="priority-badge growth">Growth</span>
+								<h4>Conversational AI Assistant</h4>
+								<p>24/7 platform support, career guidance, and intelligent help system</p>
+							</div>
+							<div class="feature-item">
+								<span class="priority-badge growth">Growth</span>
+								<h4>Predictive Analytics Engine</h4>
+								<p>Market trend analysis, skill demand forecasting, and success pattern recognition</p>
+							</div>
+							<div class="feature-item">
+								<span class="priority-badge scale">Scale</span>
+								<h4>Advanced Behavioral Matching</h4>
+								<p>Work style compatibility, cultural fit analysis, and success prediction models</p>
+							</div>
+							<div class="feature-item">
+								<span class="priority-badge scale">Scale</span>
+								<h4>Market Intelligence Hub</h4>
+								<p>Real-time salary trends, competitor analysis, and industry forecasting</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Content Strategy Section -->
+			<div id="content" class="section">
+				<div class="card">
+					<h2>📝 Content Strategy & Brand Building</h2>
+
+					<div class="strategy-overview">
+						<p>
+							Positioning as the definitive career intelligence platform through strategic content that
+							establishes thought leadership and drives organic discovery.
+						</p>
+					</div>
+
+					<h3>Content Pillars</h3>
+					<div class="content-pillars">
+						<div class="pillar-card">
+							<h4>🎯 Career Intelligence</h4>
+							<p>
+								Data-driven insights on job market trends, salary analysis, and skill demand forecasting
+							</p>
+							<div class="content-examples">
+								<span>Market Reports</span>
+								<span>Salary Benchmarks</span>
+								<span>Skills Analysis</span>
+							</div>
+						</div>
+						<div class="pillar-card">
+							<h4>🚀 Professional Development</h4>
+							<p>Actionable career growth strategies, learning paths, and skill development guidance</p>
+							<div class="content-examples">
+								<span>Growth Frameworks</span>
+								<span>Learning Roadmaps</span>
+								<span>Skill Assessments</span>
+							</div>
+						</div>
+						<div class="pillar-card">
+							<h4>🤖 AI & Future of Work</h4>
+							<p>
+								Expert analysis on AI's impact on careers, emerging roles, and workplace transformation
+							</p>
+							<div class="content-examples">
+								<span>AI Impact Studies</span>
+								<span>Future Role Predictions</span>
+								<span>Workplace Evolution</span>
+							</div>
+						</div>
+						<div class="pillar-card">
+							<h4>💼 Industry Deep Dives</h4>
+							<p>Comprehensive analysis of specific industries, roles, and career pathways</p>
+							<div class="content-examples">
+								<span>Industry Reports</span>
+								<span>Role Breakdowns</span>
+								<span>Career Pathways</span>
+							</div>
+						</div>
+					</div>
+
+					<h3>9-Month Content Calendar</h3>
+					<div class="content-calendar">
+						<div class="calendar-phase">
+							<h4>Phase 1: Foundation (Months 1-3)</h4>
+							<div class="phase-content">
+								<div class="content-track">
+									<strong>Blog Articles (2/week):</strong> Career fundamentals, skill development
+									guides, industry primers
+								</div>
+								<div class="content-track">
+									<strong>Video Content (1/week):</strong> Expert interviews, career advice sessions,
+									market analysis
+								</div>
+								<div class="content-track">
+									<strong>Infographics (2/month):</strong> Salary trends, skill maps, career
+									progression charts
+								</div>
+							</div>
+						</div>
+						<div class="calendar-phase">
+							<h4>Phase 2: Authority (Months 4-6)</h4>
+							<div class="phase-content">
+								<div class="content-track">
+									<strong>Blog Articles (3/week):</strong> Advanced career strategies, AI impact
+									analysis, exclusive research
+								</div>
+								<div class="content-track">
+									<strong>Video Content (2/week):</strong> Webinar series, industry leader
+									conversations, tool demonstrations
+								</div>
+								<div class="content-track">
+									<strong>Podcasts (1/week):</strong> Career conversations, industry insights, expert
+									roundtables
+								</div>
+							</div>
+						</div>
+						<div class="calendar-phase">
+							<h4>Phase 3: Leadership (Months 7-9)</h4>
+							<div class="phase-content">
+								<div class="content-track">
+									<strong>Comprehensive Guides:</strong> Industry career handbooks, skill development
+									frameworks
+								</div>
+								<div class="content-track">
+									<strong>Interactive Tools:</strong> Career assessment quizzes, salary calculators,
+									skill gap analyzers
+								</div>
+								<div class="content-track">
+									<strong>Thought Leadership:</strong> Original research reports, market predictions,
+									trend analysis
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h3>SEO & Discovery Strategy</h3>
+					<div class="seo-strategy">
+						<div class="seo-focus">
+							<h4>🎯 Keyword Targeting</h4>
+							<div class="keyword-categories">
+								<div class="keyword-group">
+									<strong>Career Intelligence:</strong>
+									<span>"career path analysis," "skill demand trends," "salary benchmarking"</span>
+								</div>
+								<div class="keyword-group">
+									<strong>Professional Growth:</strong>
+									<span
+										>"career development framework," "professional skill assessment," "growth
+										strategies"</span
+									>
+								</div>
+								<div class="keyword-group">
+									<strong>AI & Careers:</strong>
+									<span>"AI impact on jobs," "future of work," "career automation"</span>
+								</div>
+							</div>
+						</div>
+						<div class="seo-tactics">
+							<h4>📈 Organic Growth Tactics</h4>
+							<ul>
+								<li>Long-form authoritative content (3000+ words)</li>
+								<li>Interactive tools and calculators for backlink attraction</li>
+								<li>Expert contributor network for content amplification</li>
+								<li>Strategic internal linking for topic authority</li>
+								<li>Schema markup for enhanced search visibility</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Roadmap Section -->
+			<div id="roadmap" class="section">
+				<div class="card">
+					<h2>🗺️ Implementation Roadmap</h2>
+
+					<div class="timeline">
+						<div class="timeline-item">
+							<div class="timeline-content">
+								<h3>Phase 1: Foundation</h3>
+								<p>
+									Core user experiences - profile creation, job posting, and basic matching. Laying
+									the groundwork for everything that comes next.
+								</p>
+							</div>
+							<div class="timeline-dot"></div>
+						</div>
+
+						<div class="timeline-item">
+							<div class="timeline-content">
+								<h3>Phase 2: Intelligence</h3>
+								<p>
+									AI features roll out gradually. Resume parsing first, then job matching, then
+									professional summary generation. Each feature tested and refined.
+								</p>
+							</div>
+							<div class="timeline-dot"></div>
+						</div>
+
+						<div class="timeline-item">
+							<div class="timeline-content">
+								<h3>Phase 3: Optimization</h3>
+								<p>
+									Advanced features like saved searches, detailed analytics, and sophisticated
+									matching algorithms. This is where we separate from competition.
+								</p>
+							</div>
+							<div class="timeline-dot"></div>
+						</div>
+
+						<div class="timeline-item">
+							<div class="timeline-content">
+								<h3>Phase 4: Expansion</h3>
+								<p>
+									Multi-recruiter systems, company branding features, and administrative tools that
+									scale with our growth.
+								</p>
+							</div>
+							<div class="timeline-dot"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Metrics Section -->
+			<div id="metrics" class="section">
+				<div class="card">
+					<h2>📈 Success Metrics & Tracking</h2>
+
+					<h3>Brand Awareness Metrics</h3>
+					<div class="metrics-grid">
+						<div class="metric-card">
+							<h4>🌐 Domain Authority Growth</h4>
+							<p>Target: 30+ DA within 9 months through high-quality content and backlinks</p>
+						</div>
+						<div class="metric-card">
+							<h4>🔍 Brand Search Volume</h4>
+							<p>Track branded keyword searches and brand mention growth across platforms</p>
+						</div>
+						<div class="metric-card">
+							<h4>📊 Organic Visibility</h4>
+							<p>Monitor rankings for 500+ target keywords related to career intelligence</p>
+						</div>
+					</div>
+
+					<h3>Content Engagement Metrics</h3>
+					<div class="metrics-grid">
+						<div class="metric-card">
+							<h4>⏱️ Time on Site</h4>
+							<p>Target: 4+ minutes average session duration with 60%+ return visitor rate</p>
+						</div>
+						<div class="metric-card">
+							<h4>📈 Content Performance</h4>
+							<p>Track shares, comments, backlinks, and content-specific conversion rates</p>
+						</div>
+						<div class="metric-card">
+							<h4>🎯 Topic Authority</h4>
+							<p>Measure content ranking performance and topic cluster authority</p>
+						</div>
+					</div>
+
+					<h3>Lead Generation Metrics</h3>
+					<div class="metrics-grid">
+						<div class="metric-card">
+							<h4>📧 Email Subscriptions</h4>
+							<p>Target: 10K+ qualified subscribers through content lead magnets</p>
+						</div>
+						<div class="metric-card">
+							<h4>📚 Content Downloads</h4>
+							<p>Track guide downloads, tool usage, and content engagement depth</p>
+						</div>
+						<div class="metric-card">
+							<h4>🔄 Conversion Funnel</h4>
+							<p>Monitor visitor-to-lead-to-user conversion rates across content types</p>
+						</div>
+					</div>
+
+					<h3>Competitive Benchmarking</h3>
+					<div class="competitive-metrics">
+						<div class="benchmark-item">
+							<h4>Content Volume & Quality</h4>
+							<p>
+								Compare content output, engagement rates, and search visibility against leading career
+								advice platforms
+							</p>
+						</div>
+						<div class="benchmark-item">
+							<h4>Audience Growth Rate</h4>
+							<p>
+								Track growth velocity compared to established career platforms and emerging competitors
+							</p>
+						</div>
+						<div class="benchmark-item">
+							<h4>Market Share of Voice</h4>
+							<p>
+								Measure share of conversations around career intelligence and AI in professional
+								development
+							</p>
+						</div>
+					</div>
+
+					<h3>Content Production Workflow</h3>
+					<div class="workflow-section">
+						<div class="workflow-tools">
+							<h4>🛠️ Tools & Platforms</h4>
+							<div class="tools-grid">
+								<span>Content Planning: Airtable, Notion</span>
+								<span>SEO Research: SEMrush, Ahrefs</span>
+								<span>Design: Canva Pro, Figma</span>
+								<span>Video: Loom, Riverside.fm</span>
+								<span>Analytics: GA4, Search Console</span>
+								<span>Social Media: Buffer, LinkedIn Publisher</span>
+							</div>
+						</div>
+						<div class="workflow-process">
+							<h4>📋 Production Process</h4>
+							<ol>
+								<li>
+									<strong>Research & Planning:</strong> Keyword research, topic validation, content
+									brief creation
+								</li>
+								<li>
+									<strong>Content Creation:</strong> Writing, design, video production with SEO
+									optimization
+								</li>
+								<li>
+									<strong>Review & Optimization:</strong> Editorial review, SEO audit, performance
+									prediction
+								</li>
+								<li>
+									<strong>Distribution:</strong> Multi-channel publishing, social amplification,
+									influencer outreach
+								</li>
+								<li>
+									<strong>Analysis & Iteration:</strong> Performance tracking, optimization, and
+									strategy refinement
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			// Loading animation
+			window.addEventListener('load', function () {
+				const loading = document.getElementById('loading');
+				setTimeout(function () {
+					loading.classList.add('fade-out');
+					setTimeout(function () {
+						loading.style.display = 'none';
+					}, 500);
+				}, 1000);
+			});
+
+			function showSection(sectionId) {
+				// Hide all sections
+				document.querySelectorAll('.section').forEach((section) => {
+					section.classList.remove('active');
+				});
+				// Remove active class from all nav buttons
+				document.querySelectorAll('.nav-btn').forEach((btn) => {
+					btn.classList.remove('active');
+				});
+				// Show selected section
+				document.getElementById(sectionId).classList.add('active');
+				// Add active class to clicked button
+				event.target.classList.add('active');
+				// Smooth scroll to top of content
+				document.querySelector('.nav').scrollIntoView({ behavior: 'smooth' });
+			}
+
+			// Add some interactive animations
+			document.addEventListener('DOMContentLoaded', function () {
+				// Animate cards on scroll
+				const observerOptions = {
+					threshold: 0.1,
+					rootMargin: '0px 0px -50px 0px',
+				};
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.style.opacity = '1';
+							entry.target.style.transform = 'translateY(0)';
+						}
+					});
+				}, observerOptions);
+				document.querySelectorAll('.card, .feature-card, .metric-card').forEach((el) => {
+					el.style.opacity = '0';
+					el.style.transform = 'translateY(20px)';
+					el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+					observer.observe(el);
+				});
+				// Add hover effects to timeline items
+				document.querySelectorAll('.timeline-item').forEach((item) => {
+					item.addEventListener('mouseenter', function () {
+						this.style.transform = 'scale(1.02)';
+					});
+					item.addEventListener('mouseleave', function () {
+						this.style.transform = 'scale(1)';
+					});
+				});
+			});
+		</script>
+	</body>
 </html>
